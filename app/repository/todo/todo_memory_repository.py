@@ -1,11 +1,13 @@
+from typing import List
+from models.todo import ToDo
 from repository.todo.todo_repository import ToDoRepository
 
 
 class ToDoMemoryRepository(ToDoRepository):
-    def __init__(self, todos):
+    def __init__(self, todos: List[ToDo]):
         self.todos = todos
 
-    def get_all(self):
+    def get_all(self) -> List[ToDo]:
         return self.todos
 
     def get_by_id(self, id: str | int):
@@ -23,8 +25,9 @@ class ToDoMemoryRepository(ToDoRepository):
                 self.todos.remove(todo)
                 return todo
 
-    def update(self, todo):
-        for i, td in enumerate(self.todos):
-            if td.id == int(todo.id):
-                self.todos[i] = todo
-                return todo
+    def update(self, todo, id):
+        for td in self.todos:
+            if td.id == int(id):
+                new_td = td.update(todo)
+                print(new_td)
+                return new_td
