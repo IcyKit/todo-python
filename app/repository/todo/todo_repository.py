@@ -2,6 +2,9 @@ from abc import ABC, abstractmethod
 
 
 class ToDoRepository(ABC):
+    def __init__(self):
+        super().__init__()
+
     @abstractmethod
     def get_by_id(self, id: int): ...
     @abstractmethod
@@ -11,4 +14,4 @@ class ToDoRepository(ABC):
     @abstractmethod
     def create(self, todo): ...
     @abstractmethod
-    def update(self, todo): ...
+    def update(self, todo, id): ...

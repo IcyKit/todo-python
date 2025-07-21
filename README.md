@@ -17,6 +17,7 @@
 - Swagger
 - PyTest
 - Redis
+- Celery
 - Kafka
 - Построение REST API
 
