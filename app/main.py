@@ -8,5 +8,8 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 app.include_router(todo_router)
+
+# Это Prometheus
 Instrumentator().instrument(app).expose(app, include_in_schema=False)
+
 app.middleware("http")(log_request)
