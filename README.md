@@ -6,20 +6,21 @@
 Никита Ефимов
 
 ## Изучаемый стек
-- Python
-- FastAPI
-- SQLAlchemy
-- PostgreSQL
-- Grafana и Prometheus
+- Python ✅
+- FastAPI ✅
+- Pydantic ✅
+- SQLAlchemy ✅
+- PostgreSQL ✅
+- Grafana и Prometheus ✅
 - Docker и Kubernetes
 - Elasticsearch
 - JWT Аутентификация 
-- Swagger
+- Swagger ✅
 - PyTest
 - Redis
 - Celery
 - Kafka
-- Построение REST API
+- Построение REST API ✅
 
 ---
 
